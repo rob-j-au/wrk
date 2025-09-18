@@ -1,7 +1,7 @@
 'use strict'
 
 const async = require('async')
-const WrkBase = require('tether-wrk-base/workers/base.wrk.tether')
+const WrkBase = require('wrk-base/workers/base.wrk.js')
 const crypto = require('crypto')
 const utilsStore = require('hp-svc-facs-store/utils')
 const lWrkFunLogs = require('./lib/wrk-fun-logs')
