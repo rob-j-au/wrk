@@ -7,6 +7,8 @@
   "license": "Apache-2.0",
   "dependencies": {
     "async": "3.2.6",
+    "bfx-facs-interval": "git+https://github.com/bitfinexcom/bfx-facs-interval.git",
+    "bfx-facs-scheduler": "git+https://github.com/bitfinexcom/bfx-facs-scheduler.git",
     "bfx-svc-boot-js": "git+https://github.com/bitfinexcom/bfx-svc-boot-js.git",
     "bfx-wrk-base": "git+https://github.com/bitfinexcom/bfx-wrk-base.git",
     "hp-svc-facs-net": "git+https://github.com/tetherto/hp-svc-facs-net.git",
