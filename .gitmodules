@@ -1,6 +1,3 @@
-[submodule "wrk-compose"]
-	path = wrk-compose
-	url = git@github.com:rob-j-au/wrk-compose.git
 [submodule "wrk-docs"]
 	path = wrk-docs
 	url = git@github.com:rob-j-au/wrk-docs.git

@@ -1,0 +1,106 @@
+services:
+  wrk-book:
+    image: ghcr.io/rob-j-au/wrk-book/wrk-book:latest
+    platform: linux/amd64
+    container_name: wrk-book-service
+    command: sh -c 'node worker.js --wtype $$WORKER_TYPE --env $$NODE_ENV --debug $$DEBUG_MODE --rack $$RACK_ID'
+    restart: unless-stopped
+    networks:
+      - wrk-network
+    volumes:
+      - wrk-book-data:/app/store
+      - wrk-book-status:/app/status
+      - ./config/wrk-book:/app/config
+    env_file:
+      - ./env/wrk-book.env
+
+  wrk-ork:
+    image: ghcr.io/rob-j-au/wrk-ork/wrk-ork:latest
+    platform: linux/amd64
+    container_name: wrk-ork-service
+    command: sh -c 'node worker.js --wtype $$WORKER_TYPE --env $$NODE_ENV --cluster $$CLUSTER_ID'
+    restart: unless-stopped
+    networks:
+      - wrk-network
+    volumes:
+      - wrk-ork-data:/app/store
+      - wrk-ork-status:/app/status
+      - ./config/wrk-ork:/app/config
+    env_file:
+      - ./env/wrk-ork.env
+
+  app-node:
+    image: ghcr.io/rob-j-au/app-node/app-node:latest
+    platform: linux/amd64
+    container_name: app-node-service
+    command: sh -c 'node worker.js --wtype $$WORKER_TYPE --env $$NODE_ENV --port $$PORT'
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    networks:
+      - wrk-network
+    volumes:
+      - app-node-data:/app/store
+      - app-node-status:/app/status
+      - app-node-db:/app/db
+      - ./config/app-node:/app/config
+    env_file:
+      - ./env/app-node.env
+    #healthcheck:
+    #  test: ["CMD", "curl", "-f", "http://localhost:3000/books"]
+    #  interval: 30s
+    #  timeout: 10s
+    #  retries: 3
+    #  start_period: 40s
+
+  prometheus:
+    image: prom/prometheus:latest
+    platform: linux/amd64
+    container_name: prometheus-service
+    restart: unless-stopped
+    ports:
+      - "9090:9090"
+    networks:
+      - wrk-network
+    volumes:
+      - ./config/prometheus:/etc/prometheus
+      - prometheus-data:/prometheus
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--storage.tsdb.path=/prometheus'
+      - '--web.console.libraries=/etc/prometheus/console_libraries'
+      - '--web.console.templates=/etc/prometheus/consoles'
+      - '--storage.tsdb.retention.time=200h'
+      - '--web.enable-lifecycle'
+
+  grafana:
+    image: grafana/grafana:latest
+    platform: linux/amd64
+    container_name: grafana-service
+    restart: unless-stopped
+    ports:
+      - "3001:3000"
+    networks:
+      - wrk-network
+    volumes:
+      - grafana-data:/var/lib/grafana
+      - ./config/grafana:/etc/grafana/provisioning
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+      - GF_USERS_ALLOW_SIGN_UP=false
+      - GF_INSTALL_PLUGINS=grafana-clock-panel,grafana-simple-json-datasource
+
+networks:
+  wrk-network:
+    driver: bridge
+
+volumes:
+  wrk-book-data:
+  wrk-book-status:
+  wrk-ork-data:
+  wrk-ork-status:
+  app-node-data:
+  app-node-status:
+  app-node-db:
+  prometheus-data:
+  grafana-data:

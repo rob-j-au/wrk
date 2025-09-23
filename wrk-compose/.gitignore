@@ -1,0 +1,9 @@
+config/app-node/common.json
+config/app-node/facs/auth.config.json
+config/app-node/facs/httpd.config.json
+config/app-node/facs/net.config.json
+config/wrk-book/base.thing.json
+config/wrk-book/common.json
+config/wrk-book/facs/net.config.json
+config/wrk-ork/common.json
+config/wrk-ork/facs/net.config.json
