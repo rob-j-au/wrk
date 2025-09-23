@@ -1,3 +1,4 @@
+package-lock.json
 node_modules
 *.swp
 *.swo
@@ -12,5 +13,3 @@ logs
 sec
 store
 status
-package-lock.json
-coverage

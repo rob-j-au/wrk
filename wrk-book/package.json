@@ -15,7 +15,7 @@
   "dependencies": {
     "async": "3.2.5",
     "bfx-svc-boot-js": "git+https://github.com/bitfinexcom/bfx-svc-boot-js.git",
-    "tpl-wrk-thing": "file:../tpl-wrk-thing/"
+    "tpl-wrk-thing": "github:rob-j-au/tpl-work-thing"
   },
   "devDependencies": {
     "standard": "17.1.0"

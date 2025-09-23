@@ -12,7 +12,7 @@
     "bfx-facs-interval": "git+https://github.com/bitfinexcom/bfx-facs-interval.git",
     "bfx-svc-boot-js": "git+https://github.com/bitfinexcom/bfx-svc-boot-js.git",
     "lib-js-util-base": "git+https://github.com/bitfinexcom/lib-js-util-base.git",
-    "wrk-base": "file:../wrk-base"
+    "wrk-base": "git+https://github.com/rob-j-au/wrk-base.git"
   },
   "devDependencies": {
     "standard": "17.1.0"
