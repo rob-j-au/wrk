@@ -49,8 +49,8 @@ Documentation for the wrk project.
 
 #### Diagram
 
-![wrk-architecture](docs/wrk-architecture.drawio.png)
+![docs/wrk-architecture](docs/wrk-architecture.png)
 
 #### Github Pipeline
 
-![github-pipeline](docs/github-pipeline.drawio.png)
+![docs/github-pipeline](docs/github-pipeline.png)
