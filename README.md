@@ -10,9 +10,9 @@ Documentation for the wrk project.
 
 ### Services
 
-- https://github.com/rob-j-au/wrk-book
-- https://github.com/rob-j-au/wrk-ork
-- https://github.com/rob-j-au/app-node
+- [wrk-book](wrk-book)
+- [wrk-ork](wrk-ork)
+- [app-node](app-node)
 
 ### Docker
 
@@ -23,11 +23,10 @@ Documentation for the wrk project.
 - https://github.com/rob-j-au/app-node/blob/main/Dockerfile
 
 
-#### Github Docker Build & Push Workflows
+#### Github Docker Build & Push Workflow
 
-- https://github.com/rob-j-au/wrk-book/blob/main/.github/workflows/docker.yml
-- https://github.com/rob-j-au/wrk-ork/blob/main/.github/workflows/docker.yml
-- https://github.com/rob-j-au/app-node/blob/main/.github/workflows/docker.yml
+- [.gihub/workflows/monorepo-docker.yml](.gihub/workflows/monorepo-docker.yml)
+
 
 #### Docker Builds (w /caching)
 
@@ -37,13 +36,13 @@ Documentation for the wrk project.
 
 #### Docker Images
 
-- https://github.com/rob-j-au/wrk-book/pkgs/container/wrk-book%2Fwrk-book
-- https://github.com/rob-j-au/wrk-ork/pkgs/container/wrk-ork%2Fwrk-ork
-- https://github.com/rob-j-au/app-node/pkgs/container/app-node%2Fapp-node
+- https://github.com/rob-j-au/wrk/pkgs/container/wrk%2Fwrk-book
+- https://github.com/rob-j-au/wrk/pkgs/container/wrk%2Fwrk-ork
+- https://github.com/rob-j-au/wrk/pkgs/container/wrk%2Fapp-node
 
 ### Docker Compose Stack
 
-- https://github.com/rob-j-au/wrk-compose
+- [wrk-compose](wrk-compose)
 
 ### Architecture
 
