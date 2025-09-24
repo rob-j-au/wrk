@@ -5,6 +5,13 @@ on:
     branches: [ '**' ]
   pull_request:
     branches: [ main, master ]
+  workflow_dispatch:
+    inputs:
+      force_build:
+        description: 'Force build all services'
+        required: false
+        default: 'false'
+        type: boolean
 
 env:
   REGISTRY: ghcr.io
@@ -38,7 +45,7 @@ jobs:
   # Build and push wrk-ork service
   build-wrk-ork:
     needs: detect-changes
-    if: needs.detect-changes.outputs.wrk-ork == 'true'
+    if: github.event_name == 'workflow_dispatch' && github.event.inputs.force_build == 'true' || needs.detect-changes.outputs.wrk-ork == 'true'
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -89,7 +96,7 @@ jobs:
   # Build and push wrk-book service
   build-wrk-book:
     needs: detect-changes
-    if: needs.detect-changes.outputs.wrk-book == 'true'
+    if: github.event_name == 'workflow_dispatch' && github.event.inputs.force_build == 'true' || needs.detect-changes.outputs.wrk-book == 'true'
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -140,7 +147,7 @@ jobs:
   # Build and push app-node service
   build-app-node:
     needs: detect-changes
-    if: needs.detect-changes.outputs.app-node == 'true'
+    if: github.event_name == 'workflow_dispatch' && github.event.inputs.force_build == 'true' || needs.detect-changes.outputs.app-node == 'true'
     runs-on: ubuntu-latest
     permissions:
       contents: read
