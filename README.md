@@ -36,6 +36,8 @@ A workflow that detects which services have changed (wrk-book, wrk-ork, app-node
 
 ![docs/github-pipeline](docs/github-pipeline.png)
 
+![docs/github-monorepo-docker](docs/github-monorepo-docker.png)
+
 #### Docker Builds (w /caching)
 
 - https://github.com/rob-j-au/wrk/actions
