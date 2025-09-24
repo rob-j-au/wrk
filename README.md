@@ -25,7 +25,7 @@ Documentation for the wrk project.
 
 #### Github Docker Build & Push Workflow
 
-- [.gihub/workflows/monorepo-docker.yml](.gihub/workflows/monorepo-docker.yml)
+- [.github/workflows/monorepo-docker.yml](.github/workflows/monorepo-docker.yml)
 
 
 #### Docker Builds (w /caching)
