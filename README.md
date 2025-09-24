@@ -18,9 +18,9 @@ Documentation for the wrk project.
 
 #### Dockerfiles
 
-- https://github.com/rob-j-au/wrk-book/blob/main/Dockerfile
-- https://github.com/rob-j-au/wrk-ork/blob/main/Dockerfile
-- https://github.com/rob-j-au/app-node/blob/main/Dockerfile
+- [wrk-book](wrk-book/Dockerfile)
+- [wrk-ork](wrk-ork/Dockerfile)
+- [app-node](app-node/Dockerfile)
 
 
 #### Github Docker Build & Push Workflow
@@ -30,9 +30,7 @@ Documentation for the wrk project.
 
 #### Docker Builds (w /caching)
 
-- https://github.com/rob-j-au/wrk-book/actions
-- https://github.com/rob-j-au/wrk-ork/actions
-- https://github.com/rob-j-au/app-node/actions
+- https://github.com/rob-j-au/wrk/actions
 
 #### Docker Images
 
