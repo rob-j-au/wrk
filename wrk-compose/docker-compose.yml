@@ -1,6 +1,6 @@
 services:
   wrk-book:
-    image: ghcr.io/rob-j-au/wrk-book/wrk-book:latest
+    image: ghcr.io/rob-j-au/wrk/wrk-book:latest
     platform: linux/amd64
     container_name: wrk-book-service
     command: sh -c 'node worker.js --wtype $$WORKER_TYPE --env $$NODE_ENV --debug $$DEBUG_MODE --rack $$RACK_ID'
@@ -15,7 +15,7 @@ services:
       - ./env/wrk-book.env
 
   wrk-ork:
-    image: ghcr.io/rob-j-au/wrk-ork/wrk-ork:latest
+    image: ghcr.io/rob-j-au/wrk/wrk-ork:latest
     platform: linux/amd64
     container_name: wrk-ork-service
     command: sh -c 'node worker.js --wtype $$WORKER_TYPE --env $$NODE_ENV --cluster $$CLUSTER_ID'
@@ -30,7 +30,7 @@ services:
       - ./env/wrk-ork.env
 
   app-node:
-    image: ghcr.io/rob-j-au/app-node/app-node:latest
+    image: ghcr.io/rob-j-au/wrk/app-node:latest
     platform: linux/amd64
     container_name: app-node-service
     command: sh -c 'node worker.js --wtype $$WORKER_TYPE --env $$NODE_ENV --port $$PORT'
