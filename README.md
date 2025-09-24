@@ -50,5 +50,7 @@ A workflow that detects which services have changed (wrk-book, wrk-ork, app-node
 
 ### Docker Compose Stack
 
+Instructions to run the wrk services using docker compose
+
 - [wrk-compose](wrk-compose)
 
