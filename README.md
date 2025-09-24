@@ -49,6 +49,8 @@ Original polyrepo docs: https://github.com/rob-j-au/wrk-docs
 
 ![docs/wrk-architecture](docs/wrk-architecture.png)
 
-#### Github Pipeline
+#### Github Workflow
+
+A workflow that detects which services have changed (wrk-book, wrk-ork, app-node), builds and pushes them to GitHub Container Registry.
 
 ![docs/github-pipeline](docs/github-pipeline.png)
