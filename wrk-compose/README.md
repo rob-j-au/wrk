@@ -18,6 +18,12 @@ docker-compose stack for running the wrk-book, wrk-ork and app-node services (la
 ./setup-config.sh
 ```
 
+app-node secret/key configuration
+
+```
+./config/app-node/common.json
+```
+
 #### Configure Environment
 
 
