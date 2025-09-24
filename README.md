@@ -1,7 +1,8 @@
-# wrk-docs
+# wrk (monorepo)
 
 Documentation for the wrk project.
 
+Original polyrepo docs: https://github.com/rob-j-au/wrk-docs
 
 ### Shared Libraries
 
