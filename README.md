@@ -4,6 +4,12 @@ Documentation for the wrk project.
 
 Original polyrepo docs: https://github.com/rob-j-au/wrk-docs
 
+### Architecture
+
+#### Diagram
+
+![docs/wrk-architecture](docs/wrk-architecture.png)
+
 ### Shared Libraries
 
 - https://github.com/rob-j-au/tpl-work-thing
@@ -28,6 +34,9 @@ Original polyrepo docs: https://github.com/rob-j-au/wrk-docs
 
 - [.github/workflows/monorepo-docker.yml](.github/workflows/monorepo-docker.yml)
 
+A workflow that detects which services have changed (wrk-book, wrk-ork, app-node), builds and pushes them to GitHub Container Registry.
+
+![docs/github-pipeline](docs/github-pipeline.png)
 
 #### Docker Builds (w /caching)
 
@@ -43,14 +52,3 @@ Original polyrepo docs: https://github.com/rob-j-au/wrk-docs
 
 - [wrk-compose](wrk-compose)
 
-### Architecture
-
-#### Diagram
-
-![docs/wrk-architecture](docs/wrk-architecture.png)
-
-#### Github Workflow
-
-A workflow that detects which services have changed (wrk-book, wrk-ork, app-node), builds and pushes them to GitHub Container Registry.
-
-![docs/github-pipeline](docs/github-pipeline.png)
