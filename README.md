@@ -8,7 +8,7 @@ Original polyrepo docs: https://github.com/rob-j-au/wrk-docs
 
 ![docs/wrk-architecture](docs/wrk-architecture.png)
 
-### Shared Libraries
+### Dependencies
 
 - https://github.com/rob-j-au/tpl-work-thing
 - https://github.com/rob-j-au/wrk-base
