@@ -6,8 +6,6 @@ Original polyrepo docs: https://github.com/rob-j-au/wrk-docs
 
 ### Architecture
 
-#### Diagram
-
 ![docs/wrk-architecture](docs/wrk-architecture.png)
 
 ### Shared Libraries
