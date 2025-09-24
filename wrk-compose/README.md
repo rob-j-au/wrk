@@ -1,7 +1,6 @@
 ## wrk-compose
 
-- docker-compose stack for running the wrk-book, wrk-ork and app-node services (from Github Container Registry with latest tag)
-- Prometheus and Grafana monitoring
+docker-compose stack for running the wrk-book, wrk-ork and app-node services (latest main branch images) with Prometheus and Grafana monitoring
 
 - [wrk-book](../wrk-book)
 - [wrk-ork](../wrk-ork)
