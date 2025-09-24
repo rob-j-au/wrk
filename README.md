@@ -42,11 +42,11 @@ A workflow that detects which services have changed (wrk-book, wrk-ork, app-node
 
 - https://github.com/rob-j-au/wrk/actions
 
-#### Docker Images
+#### Docker Registry Images
 
-- https://github.com/rob-j-au/wrk/pkgs/container/wrk%2Fwrk-book
-- https://github.com/rob-j-au/wrk/pkgs/container/wrk%2Fwrk-ork
-- https://github.com/rob-j-au/wrk/pkgs/container/wrk%2Fapp-node
+- [wrk-book](https://github.com/rob-j-au/wrk/pkgs/container/wrk%2Fwrk-book)
+- [wrk-ork](https://github.com/rob-j-au/wrk/pkgs/container/wrk%2Fwrk-ork)
+- [app-node](https://github.com/rob-j-au/wrk/pkgs/container/wrk%2Fapp-node)
 
 ### Docker Compose Stack
 
